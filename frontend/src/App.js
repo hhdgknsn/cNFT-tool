@@ -5,7 +5,7 @@ import CampaignAnalytics from './pages/CampaignAnalytics';
 import SettingsPage from './pages/SettingsPage';
 import NotFoundPage from './pages/NotFoundPage';
 import Navbar from './components/Navbar';
-import './styles.css';
+import './styles/styles.css';
 
 const App = () => {
   return (

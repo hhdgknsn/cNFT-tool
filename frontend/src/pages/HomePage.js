@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import CreateCampaignForm from '../components/CreateCampaignForm';
 import CampaignList from '../components/CampaignList';
 import { fetchCampaigns } from '../services/campaignService';
+import '../styles/homePage.css';
 
 const HomePage = () => {
   const [campaigns, setCampaigns] = useState([]);
@@ -21,18 +22,16 @@ const HomePage = () => {
     fetchCampaigns()
       .then((data) => {
         setCampaigns(data);
-        setMessage('Campaigns loaded successfully!');
       })
       .catch((err) => setError('Failed to fetch campaigns.'))
       .finally(() => setLoading(false));
   };
 
   return (
-    <div>
+    <div className='home-page-div'>
       <h1>cNFT Campaigns</h1>
       {loading && <p>Loading...</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
-      {message && <p style={{ color: 'green' }}>{message}</p>}
       <CreateCampaignForm onCampaignCreated={loadCampaigns} />
       <CampaignList campaigns={campaigns} />
     </div>

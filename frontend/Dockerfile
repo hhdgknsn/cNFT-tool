@@ -2,7 +2,7 @@
 FROM node:18
 
 # Set the working directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Copy package.json and package-lock.json to install dependencies
 COPY package*.json ./

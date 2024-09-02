@@ -1,0 +1,181 @@
+/* src/styles.css */
+
+/* General Resets and Layout */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1d;
+  color: #e6e6e6;
+  font-size: 14px; /* Smaller font size for better readability */
+  line-height: 1.6; /* Better line height for text */
+}
+
+/* Container for the entire content */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #2a2a2e;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex; /* Flexbox for better layout */
+  flex-direction: column;
+  gap: 20px; /* Add spacing between sections */
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #121212;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0; /* Make the navbar sticky */
+  z-index: 1000;
+  border-bottom: 1px solid #2a2a2e; /* Subtle bottom border */
+}
+
+.navbar-brand {
+  font-size: 1.2rem;
+  color: #e91e63;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+}
+
+.navbar-nav li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  font-size: 0.9rem; /* Smaller text for navbar items */
+}
+
+.navbar-nav li a:hover {
+  background-color: #2a2a2e;
+}
+
+/* Headers */
+h1, h2, h3 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2rem; /* Smaller font size */
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+/* Buttons */
+button {
+  background-color: #e91e63;
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px; /* Smaller padding for buttons */
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #c2185b;
+}
+
+/* Form Styling */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  gap: 10px; /* Add gap between form elements */
+}
+
+input[type="text"], textarea, .search-bar select {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #3d3d3d;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px; /* Consistent margin bottom */
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, textarea:focus {
+  border-color: #e91e63;
+  outline: none;
+}
+
+/* Card and Content Styling */
+.campaign-card, .home-page-div {
+  background-color: #2a2a2e;
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s;
+  display: flex; /* Flexbox for layout */
+  flex-direction: column;
+  gap: 15px; /* Space between elements */
+}
+
+.campaign-card:hover {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Campaign List Styling */
+.campaign-list {
+  display: flex;
+  flex-wrap: wrap; /* Flexbox for multiple columns */
+  gap: 20px; /* Spacing between cards */
+}
+
+.campaign-list .campaign-card {
+  flex: 1 1 calc(50% - 20px); /* Two-column layout */
+  box-sizing: border-box;
+}
+
+.campaign-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+/* Notification Area */
+.notification {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.9rem; /* Smaller text for notifications */
+}
+
+.notification.success {
+  background-color: #e6f4ea;
+  color: #2e7d32;
+}
+
+.notification.error {
+  background-color: #fbe9e7;
+  color: #d32f2f;
+}

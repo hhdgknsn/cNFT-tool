@@ -29,22 +29,24 @@ const CreateCampaignForm = ({ onCampaignCreated }) => {
     <div>
       <h2>Create a New Campaign</h2>
       {error && <p style={{ color: 'red' }}>{error}</p>}
-      <input
-        type="text"
-        name="name"
-        placeholder="Campaign Name"
-        value={campaignData.name}
-        onChange={handleInputChange}
-      />
-      <textarea
-        name="description"
-        placeholder="Campaign Description"
-        value={campaignData.description}
-        onChange={handleInputChange}
-      ></textarea>
-      <button onClick={handleCreateCampaign} disabled={loading}>
-        {loading ? 'Creating...' : 'Create Campaign'}
-      </button>
+      <div className='form-div'>
+        <input
+          type="text"
+          name="name"
+          placeholder="Campaign Name"
+          value={campaignData.name}
+          onChange={handleInputChange}
+        />
+        <textarea
+          name="description"
+          placeholder="Campaign Description"
+          value={campaignData.description}
+          onChange={handleInputChange}
+        ></textarea>
+        <button onClick={handleCreateCampaign} disabled={loading}>
+          {loading ? 'Creating...' : 'Create Campaign'}
+        </button>
+      </div>
     </div>
   );
 };

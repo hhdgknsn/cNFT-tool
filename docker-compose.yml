@@ -4,25 +4,30 @@ services:
     container_name: backend-service
     ports:
       - "5000:5000"
-    volumes:
-      - ./backend:/usr/src/app  # Mount backend code for live reload
-      - /usr/src/app/node_modules  # Anonymous volume to prevent overwriting node_modules
+    develop:
+      watch:
+        - action: sync+restart
+          path: ./backend
+          target: /app
+          ignore:
+            - node_modules/
     environment:
-      - NODE_ENV=development
-    command: "npx nodemon src/app.js"  # Use nodemon to enable live reload
-
+      - CHOKIDAR_USEPOLLING=true
 
   frontend-service:
     build: ./frontend
     container_name: frontend-service
     ports:
       - "3000:3000"
-    volumes:
-      - ./frontend:/usr/src/app  # Mount frontend code for live reload
-      - /usr/src/app/node_modules  # Anonymous volume to prevent overwriting node_modules
+    develop:
+      watch:
+        - action: sync
+          path: ./frontend
+          target: /app
+          ignore:
+            - node_modules/
     environment:
-      - NODE_ENV=development
-    command: "npm start"
+      - CHOKIDAR_USEPOLLING=true
 
 
   #blockchain-service:

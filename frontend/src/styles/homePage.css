@@ -1,0 +1,13 @@
+.form-div {
+    border: red solid 1px;
+    display: flex;
+    align-items: center;
+}
+
+.form-div > * {
+    margin: 0 1rem;
+}
+
+.form-div button {
+    height: 2rem;
+}
