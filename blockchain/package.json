@@ -1,0 +1,17 @@
+{
+    "name": "cnft-program",
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+      "deploy": "node src/deploy.js",
+      "mint": "node src/mint.js"
+    },
+    "dependencies": {
+      "@project-serum/anchor": "^0.24.2",
+      "dotenv": "^16.4.5",
+      "@solana/web3.js": "^1.62.0",
+      "fs": "^0.0.1-security"
+    },
+    "devDependencies": {}
+  }
+  

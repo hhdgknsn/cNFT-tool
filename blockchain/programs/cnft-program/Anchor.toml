@@ -1,0 +1,12 @@
+[workspace]
+members = ["programs/*"]
+
+[programs]
+cnft_program = "cnft_program"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+deploy = "migrate"

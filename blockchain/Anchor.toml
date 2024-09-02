@@ -1,0 +1,16 @@
+[programs.localnet]
+cnft_program = "CnftProgram11111111111111111111111111111111"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+deploy = "ts-node scripts/deploy.ts"
+mint = "ts-node scripts/mint.ts"
+
+[test]
+test_suite = "mocha"
