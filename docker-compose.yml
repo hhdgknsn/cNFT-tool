@@ -30,16 +30,18 @@ services:
       - CHOKIDAR_USEPOLLING=true
 
 
-  #blockchain-service:
-  #  build: ./blockchain
-  #  container_name: blockchain-service
-  #  volumes:
-  #    - ./blockchain:/usr/src/blockchain
-  #  environment:
-  #    - ANCHOR_PROVIDER_URL=http://localhost:8899
-  #    - ANCHOR_WALLET=/usr/src/blockchain/wallet.json
-  #  ports:
-  #    - "8899:8899"
-  #    - "8900:8900"
-  #  logging: 
-  #    driver: "none"
+  blockchain-service:
+    build: ./blockchain
+    container_name: blockchain-service
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+      - "8899:8899"
+      - "8900:8900"
+    develop:
+      watch:
+        - action: sync
+          path: ./frontend
+          target: /app
+          ignore:
+            - node_modules/
