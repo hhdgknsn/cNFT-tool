@@ -1,5 +1,4 @@
 .form-div {
-    border: red solid 1px;
     display: flex;
     align-items: center;
 }
@@ -11,3 +10,73 @@
 .form-div button {
     height: 2rem;
 }
+
+.display-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    
+  }
+
+.display-div-inner {
+    box-sizing: border-box;
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.display-div-inner2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.display-div-inner2 > * {
+    flex: 33%;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.637);
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+}
+
+.createForm {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.637);
+    border-radius: 0.5rem;
+}
+
+.createForm-inner {
+    box-sizing: border-box;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.createForm-inner2 {
+    box-sizing: border-box;
+    padding: 0.5rem;
+    padding-left: 0rem !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+}
+
+.collection-image, .cnft-image {
+    width: 20%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }

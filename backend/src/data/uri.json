@@ -1,0 +1,27 @@
+{
+    "name": "Default Collection",
+    "symbol": "DEFCOL",
+    "description": "This is a default collection description. It can be used for initializing new collections on the Solana blockchain.",
+    "image": "http://localhost:5000/assets/test.png", 
+    "external_url": "https://example.com", 
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Blue"
+      },
+      {
+        "trait_type": "Theme",
+        "value": "Abstract"
+      }
+    ],
+    "properties": {
+      "files": [
+        {
+          "uri": "http://localhost:5000/assets/test.png", 
+          "type": "image/png"
+        }
+      ],
+      "category": "image"
+    }
+  }
+  
